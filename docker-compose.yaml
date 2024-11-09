@@ -1,0 +1,13 @@
+version: '3'
+services:
+  groups_project_db:
+    container_name: postgres-groups-db
+    image: postgres:13.3
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    ports:
+      - 5440:5432
+
+
